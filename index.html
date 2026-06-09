@@ -21,131 +21,127 @@
         }
 
         * { box-sizing: border-box; font-family: 'Hind Siliguri', sans-serif; }
-        body { margin: 0; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        body { margin: 0; background-color: var(--bg); color: var(--text); line-height: 1.6; padding-top: 180px; padding-bottom: 70px; }
 
+        /* ফিক্সড হেডার */
         header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: var(--white);
-            padding: 40px 20px;
+            padding: 15px 20px;
             text-align: center;
             box-shadow: var(--shadow);
+            z-index: 1100;
         }
-        header h1 { margin: 0; font-size: 28px; }
-        .contact-info { margin-top: 15px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .contact-info a { color: white; text-decoration: none; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 50px; font-size: 14px; }
+        header h1 { margin: 0; font-size: 22px; }
+        header p { margin: 5px 0; font-size: 14px; opacity: 0.9; }
+        .contact-info { margin-top: 8px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .contact-info a { color: white; text-decoration: none; background: rgba(255,255,255,0.2); padding: 3px 12px; border-radius: 50px; font-size: 13px; }
 
+        /* ফিক্সড নেভিগেশন */
         nav {
             background: var(--white);
             display: flex;
             justify-content: center;
-            position: sticky;
-            top: 0;
+            position: fixed;
+            top: 125px; 
+            left: 0;
+            width: 100%;
             z-index: 1000;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             overflow-x: auto;
         }
         nav a {
             color: var(--text);
-            padding: 16px 20px;
+            padding: 12px 15px;
             text-decoration: none;
             font-weight: 600;
             transition: 0.3s;
             border-bottom: 3px solid transparent;
             white-space: nowrap;
             cursor: pointer;
+            font-size: 14px;
         }
         nav a:hover { color: var(--primary); }
         nav a.active-link { color: var(--primary); border-bottom-color: var(--primary); background: #f0fdfa; }
 
-        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; min-height: 60vh; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 15px; min-height: 70vh; }
         
         section { display: none; animation: fadeIn 0.5s ease; }
         section.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .search-container { margin-bottom: 30px; }
-        .search-box {
-            width: 100%;
-            padding: 15px 25px;
-            border-radius: 50px;
-            border: 2px solid #e2e8f0;
-            font-size: 18px;
-            outline: none;
-            transition: 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .search-box:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(0, 118, 100, 0.1); }
-
-        .filter-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-        select {
-            width: 100%;
-            padding: 12px;
+        /* শিফট হেডিং */
+        .shift-title {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
             border-radius: 8px;
-            border: 1px solid #cbd5e1;
-            font-size: 15px;
-            background: #fff;
-            cursor: pointer;
+            margin: 25px 0 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
         }
+        .shift-morning { background: #f59e0b; } 
+        .shift-afternoon { background: #6366f1; } 
 
-        /* Doctor Card */
+        /* Doctor Card Style */
         .doctor-card {
             background: var(--white);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 20px;
-            border-left: 8px solid var(--primary);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            transition: 0.3s;
-            position: relative;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
         }
-        .doctor-card:hover { transform: scale(1.01); box-shadow: var(--shadow); }
-        .doc-name { font-size: 22px; color: var(--primary); margin: 0 0 8px 0; }
-        .doc-spec { color: #64748b; font-weight: 500; display: block; margin-bottom: 15px; }
+        .doc-name { font-size: 18px; color: var(--primary); margin: 0; font-weight: 700; }
+        .doc-spec { color: #64748b; font-size: 14px; margin-bottom: 8px; }
         
-        .card-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
+        .card-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
         .badge {
             background: #f1f5f9;
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 13px;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 12px;
             font-weight: 600;
-            color: #475569;
         }
-        .badge-fee { background: #fff1f2; color: #e11d48; }
+        .badge-time { background: #e0f2fe; color: #0369a1; }
+        .badge-room { background: #fef3c7; color: #92400e; }
+        .badge-fee { background: #fff1f2; color: #e11d48; } /* ফি এর জন্য লালচে রঙ */
 
-        .schedule-table {
+        /* ফিক্সড ফুটার */
+        .footer { 
+            position: fixed;
+            bottom: 0;
+            left: 0;
             width: 100%;
-            border-top: 1px solid #f1f5f9;
-            padding-top: 15px;
-            margin-top: 10px;
+            background: #1e293b; 
+            color: white; 
+            text-align: center; 
+            padding: 10px; 
+            z-index: 1100;
+            font-size: 13px;
         }
-        .schedule-row { display: flex; justify-content: space-between; padding: 5px 0; font-size: 14px; border-bottom: 1px solid #f8fafc; }
-        .schedule-row strong { color: var(--primary); }
 
-        /* Table Style */
-        .table-responsive { overflow-x: auto; background: white; border-radius: 15px; box-shadow: var(--shadow); }
-        table { width: 100%; border-collapse: collapse; min-width: 600px; }
-        th { background: var(--primary); color: white; padding: 15px; text-align: left; }
-        td { padding: 15px; border-bottom: 1px solid #f1f5f9; }
-        tr:last-child td { border: none; }
-        tr:hover { background: #f0fdfa; }
-
-        .footer { background: #1e293b; color: white; text-align: center; padding: 50px 20px; margin-top: 60px; }
-        .no-data { text-align: center; padding: 40px; color: #94a3b8; font-size: 18px; }
+        .search-box { width: 100%; padding: 12px 20px; border-radius: 50px; border: 2px solid #e2e8f0; font-size: 16px; margin-bottom: 20px; }
+        .filter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+        select { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; }
+        .table-responsive { overflow-x: auto; background: white; border-radius: 10px; }
+        table { width: 100%; border-collapse: collapse; }
+        th { background: var(--primary); color: white; padding: 12px; text-align: left; }
+        td { padding: 12px; border-bottom: 1px solid #f1f5f9; }
 
         @media (max-width: 600px) {
-            header h1 { font-size: 22px; }
-            .container { margin: 15px auto; }
-            nav a { padding: 12px 15px; font-size: 14px; }
+            body { padding-top: 200px; }
+            header h1 { font-size: 18px; }
+            nav { top: 145px; }
+            .filter-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -153,7 +149,7 @@
 
 <header>
     <h1><i class="fa-solid fa-hospital-user"></i> খাজা বদরুদদোজা মডার্ন হাসপাতাল</h1>
-    <p>সফিপুর, কালিয়াকৈর, গাজীপুর - ডিজিটাল তথ্য কেন্দ্র</p>
+    <p>সফিপুর, কালিয়াকৈর, গাজীপুর</p>
     <div class="contact-info">
         <a href="tel:01776606262"><i class="fa-solid fa-phone"></i> ০১৭৭৬-৬০৬২৬২</a>
         <a href="tel:01687625565"><i class="fa-solid fa-phone"></i> ০১৬৮৭৬২৫৫৬৫</a>
@@ -169,14 +165,10 @@
 
 <div class="container">
     
-    <!-- Quick Search Section -->
+    <!-- Search Section -->
     <section id="home" class="active">
-        <div class="search-container">
-            <input type="text" id="mainSearch" class="search-box" placeholder="ডাক্তারের নাম বা রোগ লিখে সার্চ করুন (যেমন: হার্ট, দাঁত, ইত্যাদি)..." onkeyup="searchDoctors()">
-        </div>
-        <div id="searchResults">
-            <div class="no-data">ডাক্তারের নাম লিখে সার্চ করুন অথবা মেনু থেকে ফিল্টার করুন।</div>
-        </div>
+        <input type="text" id="mainSearch" class="search-box" placeholder="ডাক্তারের নাম বা বিভাগ লিখে সার্চ করুন..." onkeyup="searchDoctors()">
+        <div id="searchResults"></div>
     </section>
 
     <!-- Day View Section -->
@@ -189,20 +181,18 @@
                 <option value="বুধবার">বুধবার</option><option value="বৃহস্পতিবার">বৃহস্পতিবার</option>
                 <option value="শুক্রবার">শুক্রবার</option>
             </select>
-            <select id="deptSelectDay" onchange="filterDay()"><option value="">বিভাগ সিলেক্ট করুন</option></select>
+            <select id="deptSelectDay" onchange="filterDay()"><option value="">সকল বিভাগ</option></select>
         </div>
         <div id="dayResults"></div>
     </section>
 
-    <!-- Fee View Section -->
+    <!-- Fee View -->
     <section id="fee-view">
-        <div class="filter-grid">
-            <select id="deptSelectFee" onchange="filterFees()"><option value="">বিভাগ সিলেক্ট করুন</option></select>
-        </div>
+        <select id="deptSelectFee" onchange="filterFees()" style="margin-bottom:20px;"><option value="">বিভাগ সিলেক্ট করুন</option></select>
         <div class="table-responsive" id="feeResults"></div>
     </section>
 
-    <!-- Full Schedule Section -->
+    <!-- Full Schedule -->
     <section id="full-view">
         <div class="filter-grid">
             <select id="deptSelectFull" onchange="updateDocList()"><option value="">বিভাগ সিলেক্ট করুন</option></select>
@@ -214,12 +204,11 @@
 </div>
 
 <div class="footer">
-    <p>&copy; ২০২৪ খাজা বদরুদদোজা মডার্ন হাসপাতাল। সফিপুর, কালিয়াকৈর, গাজীপুর।</p>
-    <p style="opacity: 0.6; font-size: 13px;">Developed for Patient Care & Digital Information.</p>
+    <p>&copy; ২০২৪ খাজা বদরুদদোজা মডার্ন হাসপাতাল। সফিপুর, গাজীপুর।</p>
 </div>
 
 <script>
-    // আপনার দেওয়া প্রতিটা ডাটা এখানে নিখুঁতভাবে আছে
+    // আপনার দেওয়া সকল ডাটা
     const doctors = [
         // মেডিসিন বিভাগ
         { name: "অধ্যাপক ডা. আবদুল হামিদ", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "বক্ষব্যাধি ও মেডিসিন বিশেষজ্ঞ", fee1: 700, fee2: 500, schedules: [{day: "শনিবার", time: "10:00 AM - 3:00 PM", room: "145"}, {day: "বুধবার", time: "10:00 AM - 3:00 PM", room: "145"}] },
@@ -321,11 +310,6 @@
         { name: "সহকারী অধ্যাপক ডা. সজল রায়", dept: "নাক, কান ও গলা (ENT)", spec: "নাক, কান, গলা রোগ বিশেষজ্ঞ ও হেড নেক সার্জন", fee1: 600, fee2: 400, schedules: [{day: "বৃহস্পতিবার", time: "5:00 PM - 8:00 PM", room: "147"}] },
         { name: "ডা. মোঃ হাসনাত আনোয়ার", dept: "নাক, কান ও গলা (ENT)", spec: "নাক, কান ও গলা রোগ বিশেষজ্ঞ ও সার্জন", fee1: 500, fee2: 300, schedules: [{day: "বৃহস্পতিবার", time: "4:00 PM - 8:00 PM", room: "120"}] },
 
-        // লিভার ও গ্যাস্ট্রো
-        { name: "সহকারী অধ্যাপক ডাঃ মোঃ সাইয়েদুল আশিক", dept: "লিভার ও গ্যাস্ট্রোএন্টারোলজি", spec: "লিভার, গ্যাস্ট্রোএন্টারোজি ও মেডিসিন বিশেষজ্ঞ", fee1: 600, fee2: 400, schedules: [{day: "শনিবার", time: "3:30 PM - 8:00 PM", room: "117"}, {day: "মঙ্গলবার", time: "3:30 PM - 8:00 PM", room: "117"}, {day: "বুধবার", time: "4:00 PM - 8:00 PM", room: "117"}] },
-        { name: "সহকারি অধ্যাপক ডা. তাহমিদ মাহবুব", dept: "লিভার ও গ্যাস্ট্রোএন্টারোলজি", spec: "গ্যাস্ট্রো-লিভার ও মেডিসিন বিশেষজ্ঞ", fee1: 500, fee2: 0, schedules: [{day: "রবিবার", time: "4:00 PM - 8:00 PM", room: "-2"}, {day: "বৃহস্পতিবার", time: "4:00 PM - 8:00 PM", room: "-2"}, {day: "শুক্রবার", time: "10:00 AM - 8:00 PM", room: "-2"}] },
-        { name: "সহযোগী অধ্যাপক ডা. অরুন জ্যোতি তরফদার", dept: "লিভার ও গ্যাস্ট্রোএন্টারোলজি", spec: "গ্যাস্ট্রোলিভার ও মেডিসিন বিশেষজ্ঞ", fee1: 600, fee2: 0, schedules: [{day: "সোমবার", time: "4:00 PM - 8:00 PM", room: "116"}] },
-
         // চক্ষু রোগ
         { name: "ডাঃ মোঃ সুজন মাহমুদ", dept: "চক্ষু রোগ", spec: "চক্ষু ও মাথা ব্যথা রোগে অভিজ্ঞ", fee1: 400, fee2: 0, schedules: [{day: "শনিবার", time: "9:00 AM - 9:00 PM", room: "N/A"}, {day: "রবিবার", time: "9:00 AM - 9:00 PM", room: "N/A"}, {day: "সোমবার", time: "9:00 AM - 9:00 PM", room: "N/A"}, {day: "বুধবার", time: "9:00 AM - 9:00 PM", room: "N/A"}, {day: "বৃহস্পতিবার", time: "9:00 AM - 9:00 PM", room: "N/A"}] },
         { name: "সহকারী অধ্যাপক ডা. মোঃ মাহফুজ উল্লাহ", dept: "চক্ষু রোগ", spec: "চক্ষু বিশেষজ্ঞ ও সার্জন", fee1: 600, fee2: 0, schedules: [{day: "শনিবার", time: "5:00 PM - 6:00 PM", room: "N/A"}, {day: "রবিবার", time: "5:00 PM - 6:00 PM", room: "N/A"}, {day: "বুধবার", time: "5:00 PM - 6:00 PM", room: "N/A"}] },
@@ -346,7 +330,6 @@
         { name: "অধ্যাপক ডা. এম. এস জহিরুল হক চৌধুরী", dept: "ফিজিওথেরাপি ও অন্যান্য", spec: "নিউরোমেডিসিন বিশেষজ্ঞ", fee1: 1000, fee2: 0, schedules: [{day: "শুক্রবার", time: "11:00 AM - 7:00 PM", room: "147"}] }
     ];
 
-    // অটোমেটিক ডিপার্টমেন্ট লিস্ট তৈরি
     const depts = [...new Set(doctors.map(d => d.dept))];
 
     window.onload = () => {
@@ -364,40 +347,55 @@
         btn.classList.add('active-link');
     }
 
-    // ডাক্তার কার্ড জেনারেটর
-    function createCard(doc, highlightDay = null) {
-        let scheduleHtml = "";
-        if(!highlightDay) {
-            scheduleHtml = doc.schedules.map(s => `
-                <div class="schedule-row">
-                    <span><strong>${s.day}</strong></span>
-                    <span>${s.time} (রুম: ${s.room})</span>
-                </div>
-            `).join('');
-        } else {
-            const s = doc.schedules.find(sc => sc.day === highlightDay);
-            scheduleHtml = `<div class="schedule-row"><strong>${s.day}:</strong> ${s.time} (রুম: ${s.room})</div>`;
-        }
-
+    // ডাক্তার কার্ড আইটেম জেনারেটর (ভিজিট ফি সহ)
+    function createDocListItem(doc, schedule) {
         return `
             <div class="doctor-card">
-                <h3 class="doc-name">${doc.name}</h3>
-                <span class="doc-spec">${doc.spec}</span>
+                <div class="doc-name">${doc.name}</div>
+                <div class="doc-spec">${doc.spec}</div>
                 <div class="card-meta">
-                    <span class="badge"><i class="fa-solid fa- stethoscope"></i> ${doc.dept}</span>
+                    <span class="badge"><i class="fa-solid fa-stethoscope"></i> ${doc.dept}</span>
                     <span class="badge badge-fee"><i class="fa-solid fa-wallet"></i> ফি: ${doc.fee1}/-</span>
-                </div>
-                <div class="schedule-table">
-                    ${scheduleHtml}
+                    <span class="badge badge-time"><i class="fa-solid fa-clock"></i> ${schedule.time}</span>
+                    <span class="badge badge-room"><i class="fa-solid fa-door-open"></i> রুম: ${schedule.room}</span>
                 </div>
             </div>`;
     }
 
-    // সার্চ ফাংশন
+    // দিন অনুযায়ী ফিল্টার (সকাল/বিকাল এবং ফি সহ)
+    function filterDay() {
+        const day = document.getElementById('daySelect').value;
+        const dept = document.getElementById('deptSelectDay').value;
+        const res = document.getElementById('dayResults');
+        if(!day) return;
+
+        const filtered = doctors.filter(d => (!dept || d.dept === dept) && d.schedules.some(s => s.day === day));
+        
+        let morningHtml = "";
+        let afternoonHtml = "";
+
+        filtered.forEach(d => {
+            const s = d.schedules.find(sc => sc.day === day);
+            if(s.time.includes("AM") && !s.time.startsWith("12")) {
+                morningHtml += createDocListItem(d, s);
+            } else {
+                afternoonHtml += createDocListItem(d, s);
+            }
+        });
+
+        res.innerHTML = `
+            <div class="shift-title shift-morning"><i class="fa-solid fa-sun"></i> সকালের তালিকা</div>
+            ${morningHtml || '<div class="no-data" style="padding:10px;">সকালে কোনো ডাক্তার নেই।</div>'}
+            <div class="shift-title shift-afternoon"><i class="fa-solid fa-moon"></i> বিকাল ও সন্ধ্যার তালিকা</div>
+            ${afternoonHtml || '<div class="no-data" style="padding:10px;">বিকালে কোনো ডাক্তার নেই।</div>'}
+        `;
+    }
+
+    // সার্চ ফাংশন (ফি সহ)
     function searchDoctors() {
         const query = document.getElementById('mainSearch').value.toLowerCase();
         const results = document.getElementById('searchResults');
-        if(query.length < 2) { results.innerHTML = '<div class="no-data">কমপক্ষে ২ টি অক্ষর লিখুন...</div>'; return; }
+        if(query.length < 2) { results.innerHTML = ''; return; }
 
         const filtered = doctors.filter(d => 
             d.name.toLowerCase().includes(query) || 
@@ -405,34 +403,30 @@
             d.dept.toLowerCase().includes(query)
         );
 
-        results.innerHTML = filtered.length ? filtered.map(d => createCard(d)).join('') : '<div class="no-data">দুঃখিত, কোনো তথ্য পাওয়া যায়নি।</div>';
+        results.innerHTML = filtered.length ? filtered.map(d => `
+            <div class="doctor-card">
+                <div class="doc-name">${d.name}</div>
+                <div class="doc-spec">${d.spec}</div>
+                <div class="card-meta">
+                    <span class="badge"><i class="fa-solid fa-stethoscope"></i> ${d.dept}</span>
+                    <span class="badge badge-fee"><i class="fa-solid fa-wallet"></i> ফি: ${d.fee1}/-</span>
+                </div>
+                <div style="font-size:13px; color:#475569; margin-top:5px;">
+                    ${d.schedules.map(s => `<b>${s.day}:</b> ${s.time} (রুম: ${s.room})`).join('<br>')}
+                </div>
+            </div>
+        `).join('') : '<div class="no-data">তথ্য পাওয়া যায়নি।</div>';
     }
 
-    // দিন অনুযায়ী ফিল্টার
-    function filterDay() {
-        const day = document.getElementById('daySelect').value;
-        const dept = document.getElementById('deptSelectDay').value;
-        const res = document.getElementById('dayResults');
-        if(!day || !dept) return;
-
-        const filtered = doctors.filter(d => d.dept === dept && d.schedules.some(s => s.day === day));
-        res.innerHTML = filtered.length ? filtered.map(d => createCard(d, day)).join('') : '<div class="no-data">এই দিনে এই বিভাগে কোনো ডাক্তার নেই।</div>';
-    }
-
-    // ভিজিট ফি টেবিল
+    // ফি টেবিল
     function filterFees() {
         const dept = document.getElementById('deptSelectFee').value;
         const res = document.getElementById('feeResults');
         if(!dept) return;
 
-        let html = `<table><thead><tr><th>ডাক্তারের নাম</th><th>রুম</th><th>১ম ফি</th><th>২য় ফি</th></tr></thead><tbody>`;
+        let html = `<table><thead><tr><th>ডাক্তারের নাম</th><th>১ম ফি</th><th>২য় ফি</th></tr></thead><tbody>`;
         doctors.filter(d => d.dept === dept).forEach(d => {
-            html += `<tr>
-                <td><strong>${d.name}</strong><br><small>${d.spec}</small></td>
-                <td>${d.schedules[0].room}</td>
-                <td>${d.fee1}/-</td>
-                <td>${d.fee2 ? d.fee2+'/-' : 'N/A'}</td>
-            </tr>`;
+            html += `<tr><td><strong>${d.name}</strong><br><small>${d.spec}</small></td><td>${d.fee1}/-</td><td>${d.fee2 ? d.fee2+'/-' : 'N/A'}</td></tr>`;
         });
         res.innerHTML = html + `</tbody></table>`;
     }
@@ -451,8 +445,18 @@
         const name = document.getElementById('doctorSelect').value;
         const res = document.getElementById('fullResults');
         if(!name) return;
-        const doc = doctors.find(d => d.name === name);
-        res.innerHTML = createCard(doc);
+        const d = doctors.find(doc => doc.name === name);
+        res.innerHTML = `
+            <div class="doctor-card">
+                <div class="doc-name">${d.name}</div>
+                <div class="doc-spec">${d.spec}</div>
+                <div class="card-meta" style="margin-bottom:15px;">
+                    <span class="badge badge-fee" style="font-size:16px; padding:5px 15px;"><i class="fa-solid fa-wallet"></i> ভিজিট ফি: ${d.fee1}/-</span>
+                </div>
+                <div style="background:#f8fafc; padding:10px; border-radius:8px;">
+                    ${d.schedules.map(s => `<div style="padding:5px 0; border-bottom:1px solid #e2e8f0;"><b>${s.day}:</b> ${s.time} (রুম: ${s.room})</div>`).join('')}
+                </div>
+            </div>`;
     }
 </script>
 
