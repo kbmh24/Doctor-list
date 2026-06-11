@@ -8,142 +8,9 @@
     <!-- Google Fonts & FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        :root {
-            --primary: #007664;
-            --secondary: #00a884;
-            --accent: #e11d48;
-            --bg: #f8fafc;
-            --text: #1e293b;
-            --white: #ffffff;
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
-        * { box-sizing: border-box; font-family: 'Hind Siliguri', sans-serif; }
-        body { margin: 0; background-color: var(--bg); color: var(--text); line-height: 1.6; padding-top: 180px; padding-bottom: 70px; }
-
-        /* ফিক্সড হেডার */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--white);
-            padding: 15px 20px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            z-index: 1100;
-        }
-        header h1 { margin: 0; font-size: 22px; }
-        header p { margin: 5px 0; font-size: 14px; opacity: 0.9; }
-        .contact-info { margin-top: 8px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .contact-info a { color: white; text-decoration: none; background: rgba(255,255,255,0.2); padding: 3px 12px; border-radius: 50px; font-size: 13px; }
-
-        /* ফিক্সড নেভিগেশন */
-        nav {
-            background: var(--white);
-            display: flex;
-            justify-content: center;
-            position: fixed;
-            top: 125px; 
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            overflow-x: auto;
-        }
-        nav a {
-            color: var(--text);
-            padding: 12px 15px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-            border-bottom: 3px solid transparent;
-            white-space: nowrap;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        nav a:hover { color: var(--primary); }
-        nav a.active-link { color: var(--primary); border-bottom-color: var(--primary); background: #f0fdfa; }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 15px; min-height: 70vh; }
-        
-        section { display: none; animation: fadeIn 0.5s ease; }
-        section.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* শিফট হেডিং */
-        .shift-title {
-            background: var(--primary);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            margin: 25px 0 15px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 18px;
-        }
-        .shift-morning { background: #f59e0b; } 
-        .shift-afternoon { background: #6366f1; } 
-
-        /* Doctor Card Style */
-        .doctor-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 12px;
-            border-left: 5px solid var(--primary);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-        }
-        .doc-name { font-size: 18px; color: var(--primary); margin: 0; font-weight: 700; }
-        .doc-spec { color: #64748b; font-size: 14px; margin-bottom: 8px; }
-        
-        .card-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
-        .badge {
-            background: #f1f5f9;
-            padding: 2px 10px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-        .badge-time { background: #e0f2fe; color: #0369a1; }
-        .badge-room { background: #fef3c7; color: #92400e; }
-        .badge-fee { background: #fff1f2; color: #e11d48; } /* ফি এর জন্য লালচে রঙ */
-
-        /* ফিক্সড ফুটার */
-        .footer { 
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #1e293b; 
-            color: white; 
-            text-align: center; 
-            padding: 10px; 
-            z-index: 1100;
-            font-size: 13px;
-        }
-
-        .search-box { width: 100%; padding: 12px 20px; border-radius: 50px; border: 2px solid #e2e8f0; font-size: 16px; margin-bottom: 20px; }
-        .filter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
-        select { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; }
-        .table-responsive { overflow-x: auto; background: white; border-radius: 10px; }
-        table { width: 100%; border-collapse: collapse; }
-        th { background: var(--primary); color: white; padding: 12px; text-align: left; }
-        td { padding: 12px; border-bottom: 1px solid #f1f5f9; }
-
-        @media (max-width: 600px) {
-            body { padding-top: 200px; }
-            header h1 { font-size: 18px; }
-            nav { top: 145px; }
-            .filter-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -164,7 +31,6 @@
 </nav>
 
 <div class="container">
-    
     <!-- Search Section -->
     <section id="home" class="active">
         <input type="text" id="mainSearch" class="search-box" placeholder="ডাক্তারের নাম বা বিভাগ লিখে সার্চ করুন..." onkeyup="searchDoctors()">
@@ -176,9 +42,12 @@
         <div class="filter-grid">
             <select id="daySelect" onchange="filterDay()">
                 <option value="">দিন সিলেক্ট করুন</option>
-                <option value="শনিবার">শনিবার</option><option value="রবিবার">রবিবার</option>
-                <option value="সোমবার">সোমবার</option><option value="মঙ্গলবার">মঙ্গলবার</option>
-                <option value="বুধবার">বুধবার</option><option value="বৃহস্পতিবার">বৃহস্পতিবার</option>
+                <option value="শনিবার">শনিবার</option>
+                <option value="রবিবার">রবিবার</option>
+                <option value="সোমবার">সোমবার</option>
+                <option value="মঙ্গলবার">মঙ্গলবার</option>
+                <option value="বুধবার">বুধবার</option>
+                <option value="বৃহস্পতিবার">বৃহস্পতিবার</option>
                 <option value="শুক্রবার">শুক্রবার</option>
             </select>
             <select id="deptSelectDay" onchange="filterDay()"><option value="">সকল বিভাগ</option></select>
@@ -200,265 +69,15 @@
         </div>
         <div id="fullResults"></div>
     </section>
-
 </div>
 
 <div class="footer">
     <p>&copy; ২০২৪ খাজা বদরুদদোজা মডার্ন হাসপাতাল। সফিপুর, গাজীপুর।</p>
 </div>
 
-<script>
-    // আপনার দেওয়া সকল ডাটা
-    const doctors = [
-        // মেডিসিন বিভাগ
-        { name: "অধ্যাপক ডা. আবদুল হামিদ", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "বক্ষব্যাধি ও মেডিসিন বিশেষজ্ঞ", fee1: 700, fee2: 500, schedules: [{day: "শনিবার", time: "10:00 AM - 3:00 PM", room: "145"}, {day: "বুধবার", time: "10:00 AM - 3:00 PM", room: "145"}] },
-        { name: "ডা. সাব্বির আহমেদ চৌধুরী", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "ডায়াবেটিস, উচ্চ রক্তচাপ ও মেডিসিন বিশেষজ্ঞ", fee1: 500, fee2: 300, schedules: [{day: "শনিবার", time: "10:00 AM - 8:00 PM", room: "155"}, {day: "সোমবার", time: "10:00 AM - 8:00 PM", room: "155"}] },
-        { name: "ডাঃ মোঃ ফারুক রহমান মজুমদার", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "হৃদরোগ, মেডিসিন ও বাতজ্বর বিশেষজ্ঞ", fee1: 600, fee2: 0, schedules: [{day: "শনিবার", time: "10:00 AM - 6:00 PM", room: "160"}] },
-        { name: "ডা. সৈয়দ রেজওয়ান কবির", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "হৃদরোগ, মেডিসিন ও বাতজ্বর বিশেষজ্ঞ", fee1: 700, fee2: 0, schedules: [{day: "শনিবার", time: "3:00 PM - 9:00 PM", room: "116"}, {day: "শুক্রবার", time: "10:00 AM - 8:00 PM", room: "116"}] },
-        { name: "ডা. মোঃ আসিফুর রহমান আসিফ", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "মেডিসিন, হৃদরোগ, বক্ষব্যাধি, কিডনি ও লিভার রোগ অভিজ্ঞ", fee1:500,fee2: 0, schedules: [{day: "শনিবার", time: "4:00 PM - 8:00 PM", room: "145"}, {day: "বুধবার", time: "4:00 PM - 8:00 PM", room: "145"}, {day: "বৃহস্পতিবার", time: "4:00 PM - 8:00 PM", room: "145"}] },
-        { name: "সহকারী অধ্যাপক ডাঃ মোঃ সাইয়েদুল আশিক", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "লিভার, গ্যাস্ট্রোএন্টারোজি ও মেডিসিন বিশেষজ্ঞ", fee1:600, fee2: 0, schedules: [{day: "শনিবার", time: "3:30 PM - 8:00 PM", room: "117"}, {day: "মঙ্গলবার", time: "3:30 PM - 8:00 PM", room: "117"}, {day: "বুধবার", time: "4:00 PM - 8:00 PM", room: "117"}] },
-        { name: "ডা. মোঃ ইমাদুল ইসলাম (মিঠু)", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "মেডিসিন ও ডায়াবেটিস বিশেষজ্ঞ", fee1: 500, fee2: 0, schedules: [{day: "রবিবার", time: "10:00 AM - 3:00 PM", room: "117"}, {day: "বুধবার", time: "10:00 AM - 3:00 PM", room: "117"}] },
-        { name: "প্রফেসর ডা. আবুল হাসনাত মোঃ জাফর", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "হৃদরোগ, মেডিসিন, বাতজ্বর ও উচ্চরক্তচাপ বিশেষজ্ঞ", fee1:800, fee2: 0, schedules: [{day: "রবিবার", time: "10:00 AM - 2:00 PM", room: "145"}, {day: "মঙ্গলবার", time: "10:00 AM - 2:00 PM", room: "145"}] },
-        { name: "ডা. মোঃ শোয়েব মাহমুদ চৌধুরী", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "মেডিসিন, গ্যাস্ট্রোএন্টারোলজী ও ডায়াবেটিস বিশেষজ্ঞ", fee1: 500, fee2: 0, schedules: [{day: "রবিবার", time: "10:00 AM - 3:00 PM", room: "121"}] },
-        { name: "অধ্যাপক ডা. মোঃ মুইদুল হক", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "মেডিসিন, বক্ষব্যাধি ও হৃদরোগ বিশেষজ্ঞ", fee1: 800, fee2: 0, schedules: [{day: "রবিবার", time: "4:00 PM - 8:00 PM", room: "116"}] },
-        { name: "সহকারী অধ্যাপক ডাঃ মোঃ কায়সারুল ইসলাম", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "মেডিসিন, ডায়াবেটিস ও হৃদরোগ বিশেষজ্ঞ", fee1:600, fee2: 0, schedules: [{day: "রবিবার", time: "5:00 PM - 8:00 PM", room: "117"}, {day: "মঙ্গলবার", time: "5:00 PM - 8:00 PM", room: "117"}, {day: "বৃহস্পতিবার", time: "4:00 PM - 8:00 PM", room: "117"}, {day: "শুক্রবার", time: "10:00 AM - 6:00 PM", room: "117"}] },
-        { name: "সহকারী অধ্যাপক ডাঃ মোঃ আজহারুল ইসলাম", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "মেডিসিন ও হৃদরোগ বিশেষজ্ঞ", fee1:700, fee2: 0, schedules: [{day: "রবিবার", time: "4:00 PM - 8:00 PM", room: "145"}] },
-        { name: "ডা. সুলতান মাহমুদ", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "মেডিসিন, নিউরো মেডিসিন ও ডায়াবেটিস বিশেষজ্ঞ", fee1:500, fee2: 0, schedules: [{day: "রবিবার", time: "5:00 PM - 8:00 PM", room: "115"}, {day: "মঙ্গলবার", time: "5:00 PM - 8:00 PM", room: "115"}, {day: "বৃহস্পতিবার", time: "5:00 PM - 9:00 PM", room: "115"}] },
-        { name: "ডা. প্রফুল্ল চন্দ্র নাথ তালুকদার", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "মেডিসিন, হৃদরোগ ও বক্ষব্যাধি বিশেষজ্ঞ", fee1:600, fee2: 0, schedules: [{day: "সোমবার", time: "10:00 AM - 3:00 PM", room: "117"}, {day: "মঙ্গলবার", time: "10:00 AM - 3:00 PM", room: "117"}] },
-        { name: "সহযোগী অধ্যাপক ডা. এ.কে এম তারিকুল হাসান", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "কিডনী, মেডিসিন, ডায়াবেটিস ও উচ্চ রক্তচাপ বিশেষজ্ঞ", fee1:800, fee2: 0, schedules: [{day: "সোমবার", time: "9:00 AM - 2:00 PM", room: "120"}, {day: "শুক্রবার", time: "4:00 PM - 8:00 PM", room: "120"}] },
-        { name: "ডা. নাজমুন্নাহার সাথী", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "মেডিসিন, ডায়াবেটিস ও হরমোন অভিজ্ঞ", fee1:500, fee2: 0, schedules: [{day: "সোমবার", time: "10:00 AM - 8:00 PM", room: "154"}, {day: "বুধবার", time: "10:00 AM - 7:00 PM", room: "154"}] },
-        { name: "অধ্যাপক ডা. সোলায়মান হোসেন", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "হৃদরোগ, বাতজ্বর ও মেডিসিন বিশেষজ্ঞ", fee1:700, fee2: 0, schedules: [{day: "সোমবার", time: "4:00 PM - 8:00 PM", room: "117"}] },
-        { name: "ডা. মোঃ শাহজাদা তাবরেজ", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "বক্ষব্যাধি মেডিসিন বিশেষজ্ঞ", fee1:700, fee2: 0, schedules: [{day: "সোমবার", time: "4:00 PM - 8:00 PM", room: "147"}] },
-        { name: "সহকারী অধ্যাপক ডাঃ বিশ্বজিৎ কুমার বিশ্বাস", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "বক্ষব্যাধি ও মেডিসিন বিশেষজ্ঞ", fee1:700, fee2: 0, schedules: [{day: "মঙ্গলবার", time: "3:30 PM - 7:00 PM", room: "149"}, {day: "শুক্রবার", time: "10:00 AM - 3:00 PM", room: "149"}] },
-        { name: "ডা. মোসাঃ হুরে জান্নাত", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "কিডনি রোগ, ডায়াবেটিস, হাইপারটেনশন ও মেডিসিন বিশেষজ্ঞ", fee1:600, fee2: 0, schedules: [{day: "মঙ্গলবার", time: "4:00 PM - 8:00 PM", room: "155"}] },
-        { name: "সহকারী অধ্যাপক ডা. মোঃ বদিউজ্জামান (সজীব)", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "মেডিসিন, হৃদরোগ ও বাত জ্বর বিশেষজ্ঞ", fee1:600, fee2: 0, schedules: [{day: "মঙ্গলবার", time: "4:00 PM - 8:00 PM", room: "116"}, {day: "শুক্রবার", time: "4:00 PM - 8:00 PM", room: "116"}] },
-        { name: "সহকারী অধ্যাপক ডা. এনামুল কবির খান", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "হৃদরোগ, মেডিসিন, ডায়াবেটিস, বাতজ্বর বিশেষজ্ঞ", fee1:700, fee2: 0, schedules: [{day: "বুধবার", time: "5:00 PM - 8:00 PM", room: "116"}] },
-        { name: "ডা. মোঃ মাহবুব ইসলাম", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "বক্ষব্যাধি ও মেডিসিন বিশেষজ্ঞ", fee1:700, fee2: 0, schedules: [{day: "বুধবার", time: "4:00 PM - 8:00 PM", room: "151"}, {day: "শুক্রবার", time: "4:00 PM - 8:00 PM", room: "151"}] },
-        { name: "ডা. মোঃ নাজমুল আলম", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "হৃদরোগ, মেডিসিন, বাতজ্বর ও উচ্চ রক্তচাপ বিশেষজ্ঞ", fee1:600, fee2: 0, schedules: [{day: "বুধবার", time: "4:00 PM - 8:00 PM", room: "146"}] },
-        { name: "অধ্যাপক ডা. মোঃ আব্দুর রহিম", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "মেডিসিন বিশেষজ্ঞ", fee1:1000, fee2: 0, schedules: [{day: "বৃহস্পতিবার", time: "10:00 AM - 3:00 PM", room: "116"}] },
-        { name: "ডা. মোঃ রাকিব-উল-হাসান (BSMMU)", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "বাত-ব্যথা, ডায়াবেটিস, মেডিসিন, অটো ইমিউনো বিশেষজ্ঞ", fee1:700, fee2: 0, schedules: [{day: "বৃহস্পতিবার", time: "4:00 PM - 8:00 PM", room: "146"}] },
-        { name: "সহযোগী অধ্যাপক ডা. এফ.আর. আল-মাহমুদ", dept: "মেডিসিন, ডায়াবেটিস, হৃদরোগ ও বক্ষব্যাধি", spec: "মেডিসিন, বাত ব্যথা ও প্যারালাইসিস বিশেষজ্ঞ", fee1:600, fee2: 0, schedules: [{day: "শুক্রবার", time: "3:00 PM - 8:00 PM", room: "160"}] },
-
-        // গাইনী বিভাগ
-        { name: "ডা. জাহিদাতুন নিসা", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "গাইনী বিশেষজ্ঞ ও সার্জন", fee1:600, fee2: 0, schedules: [{day: "শনিবার", time: "10:00 AM - 8:00 PM", room: "119"}] },
-        { name: "ডা. নারগীছ আক্তার", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "স্ত্রীরোগ ও প্রসূতীবিদ্যা বিশেষজ্ঞ ও সার্জন", fee1:600, fee2: 0, schedules: [{day: "শনিবার", time: "10:00 AM - 2:00 PM", room: "121"}, {day: "রবিবার", time: "10:00 AM - 2:00 PM", room: "121"}, {day: "সোমবার", time: "10:00 AM - 2:00 PM", room: "121"}, {day: "মঙ্গলবার", time: "10:00 AM - 2:00 PM", room: "121"}, {day: "বুধবার", time: "10:00 AM - 2:00 PM", room: "121"}, {day: "শুক্রবার", time: "10:00 AM - 2:00 PM", room: "121"}] },
-        { name: "ডা. শরমিন আক্তার", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "স্ত্রী ও প্রসূতি বিদ্যা বিশেষজ্ঞ ও সার্জন", fee1:700, fee2: 0, schedules: [{day: "শনিবার", time: "5:00 PM - 9:00 PM", room: "159"}] },
-        { name: "ডা. অন্তরা পাল", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "গাইনী, প্রসূতি ও গাইনী ক্যান্সার বিশেষজ্ঞ ও সার্জন", fee1:600, fee2: 0, schedules: [{day: "শনিবার", time: "4:00 PM - 8:00 PM", room: "146"}, {day: "বুধবার", time: "4:00 PM - 8:00 PM", room: "146"}] },
-        { name: "ডা. মাহমুদা খাতুন", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "গাইনী বিশেষজ্ঞ ও সার্জন", fee1: 600, fee2: 400, schedules: [{day: "রবিবার", time: "10:00 AM - 3:00 PM", room: "119"}, {day: "সোমবার", time: "10:00 AM - 8:00 PM", room: "119"}, {day: "মঙ্গলবার", time: "10:00 AM - 3:00 PM", room: "119"}, {day: "বুধবার", time: "10:00 AM - 3:00 PM", room: "119"}, {day: "বৃহস্পতিবার", time: "10:00 AM - 8:00 PM", room: "119"}, {day: "শুক্রবার", time: "10:00 AM - 8:00 PM", room: "119"}] },
-        { name: "ডা. রুমা আক্তার", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "গাইনী রোগ ও সনোলজিস্ট", fee1: 0, fee2: 0, schedules: [{day: "রবিবার", time: "10:00 AM - 8:00 PM", room: "106"}, {day: "সোমবার", time: "10:00 AM - 1:00 PM", room: "106"}, {day: "মঙ্গলবার", time: "10:00 AM - 1:00 PM", room: "106"}, {day: "বুধবার", time: "10:00 AM - 1:00 PM", room: "106"}, {day: "শুক্রবার", time: "10:00 AM - 8:00 PM", room: "106"}] },
-        { name: "সহযোগী অধ্যাপক ডা. আয়শা সিদ্দিকা", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "গাইনী বিশেষজ্ঞ ও সার্জন", fee1:800, fee2: 0, schedules: [{day: "রবিবার", time: "4:00 PM - 8:00 PM", room: "119"}, {day: "বুধবার", time: "4:00 PM - 8:00 PM", room: "119"}, {day: "শুক্রবার", time: "10:00 AM - 8:00 PM", room: "119"}] },
-        { name: "ডা. নাছিমা বেগম", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "গাইনী বিশেষজ্ঞ ও সার্জন", fee1: 0, fee2:600, schedules: [{day: "রবিবার", time: "4:00 PM - 8:00 PM", room: "159"}] },
-        { name: "সহকারী অধ্যাপক ডা. মাহামুদা ইয়াসমিন", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "প্রজনন এন্ডোক্রিনোলজি এবং বন্ধ্যাত্ব বিশেষজ্ঞ", fee1:700, fee2: 0, schedules: [{day: "সোমবার", time: "4:00 PM - 8:00 PM", room: "148"}] },
-        { name: "ডা: তানিয়া আক্তার বিথী", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "গাইনী বিশেষজ্ঞ", fee1:500, fee2: 0, schedules: [{day: "সোমবার", time: "4:00 PM - 8:00 PM", room: "159"}] },
-        { name: "ডা. লুবনা খানম", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "স্ত্রী ও প্রসূতি রোগ বিশেষজ্ঞ ও সার্জন", fee1:600, fee2: 0, schedules: [{day: "মঙ্গলবার", time: "4:00 PM - 8:00 PM", room: "119"}, {day: "বৃহস্পতিবার", time: "4:00 PM - 8:00 PM", room: "119"}] },
-        { name: "ডা: নিপা কর্মকার", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "স্ত্রীরোগ ও প্রসূতীবিদ্যা বিশেষজ্ঞ ও সার্জন", fee1:600, fee2: 0, schedules: [{day: "মঙ্গলবার", time: "4:00 PM - 8:00 PM", room: "159"}] },
-        { name: "ডা. সাথী আক্তার", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "গাইনী রোগ ও সনোলজিস্ট", fee1: 0, fee2: 0, schedules: [{day: "বুধবার", time: "4:00 PM - 8:00 PM", room: "103"}] },
-        { name: "ডা. নিগার সুলতানা", dept: "গাইনী ও প্রসূতি বিদ্যা", spec: "গাইনী ও প্রসূতি রোগ বিশেষজ্ঞ ও সার্জন", fee1:700, fee2: 0, schedules: [{day: "শুক্রবার", time: "10:00 AM - 8:00 PM", room: "159"}] },
-        
-        // শিশু রোগ বিভাগ
-        { name: "অধ্যাপক ডা. আশিষ কুমার ঘোষ", dept: "নবজাতক ও শিশুরোগ", spec: "নবজাতক, শিশু ও রক্তরোগ বিশেষজ্ঞ", fee1: 600, fee2: 400, schedules: [{day: "শনিবার", time: "10:00 AM - 2:00 PM", room: "146"}, {day: "সোমবার", time: "10:00 AM - 2:00 PM", room: "146"}, {day: "বুধবার", time: "10:00 AM - 2:00 PM", room: "146"}] },
-        { name: "ডাঃ খালেদা আক্তার হ্যাপি", dept: "নবজাতক ও শিশুরোগ", spec: "নবজাতক ও শিশুরোগ বিশেষজ্ঞ", fee1: 400, fee2: 300, schedules: [{day: "শনিবার", time: "10:00 AM - 8:00 PM", room: "115"}, {day: "রবিবার", time: "10:00 AM - 1:00 PM", room: "115"}, {day: "সোমবার", time: "10:00 AM - 1:00 PM", room: "115"}, {day: "বুধবার", time: "10:00 AM - 8:00 PM", room: "115"}] },
-        { name: "অধ্যাপক ডা. শিশির রঞ্জন দাস", dept: "নবজাতক ও শিশুরোগ", spec: "নবজাতক ও শিশু বিশেষজ্ঞ", fee1: 1000, fee2: 700, schedules: [{day: "শনিবার", time: "6:00 PM - 9:00 PM", room: "115"}, {day: "সোমবার", time: "6:00 PM - 9:00 PM", room: "115"}, {day: "বুধবার", time: "6:00 PM - 9:00 PM", room: "115"}, {day: "শুক্রবার", time: "3:00 PM - 9:00 PM", room: "115"}] },
-        { name: "ডা. সাব্বির আহমেদ ভূঁইয়া", dept: "নবজাতক ও শিশুরোগ", spec: "নবজাতক, শিশু ও কিশোর বিশেষজ্ঞ", fee1: 600, fee2: 400, schedules: [{day: "শনিবার", time: "4:00 PM - 8:00 PM", room: "158"}, {day: "সোমবার", time: "4:00 PM - 8:00 PM", room: "158"}, {day: "মঙ্গলবার", time: "4:00 PM - 8:00 PM", room: "158"}, {day: "বুধবার", time: "4:00 PM - 8:00 PM", room: "158"}, {day: "বৃহস্পতিবার", time: "4:00 PM - 8:00 PM", room: "158"}, {day: "শুক্রবার", time: "4:00 PM - 8:00 PM", room: "158"}] },
-        { name: "ডা. ফারজানা আক্তার দিতি", dept: "নবজাতক ও শিশুরোগ", spec: "শিশুরোগ বিশেষজ্ঞ", fee1: 500, fee2: 300, schedules: [{day: "রবিবার", time: "4:00 PM - 8:00 PM", room: "-2"}, {day: "সোমবার", time: "4:00 PM - 8:00 PM", room: "156"}, {day: "মঙ্গলবার", time: "10:00 AM - 1:00 PM", room: "156"}, {day: "বৃহস্পতিবার", time: "10:00 AM - 8:00 PM", room: "156"}, {day: "শুক্রবার", time: "10:00 AM - 1:00 PM", room: "156"}] },
-        { name: "ডা. মোঃ রাসেল ভূঁইয়া", dept: "নবজাতক ও শিশুরোগ", spec: "নবজাতক, শিশু ও কিশোর রোগ বিশেষজ্ঞ", fee1: 500, fee2: 300, schedules: [{day: "রবিবার", time: "4:00 PM - 8:00 PM", room: "155"}, {day: "বুধবার", time: "4:00 PM - 8:00 PM", room: "155"}] },
-        { name: "ডা. মোহাম্মদ আবু হাসনাত", dept: "নবজাতক ও শিশুরোগ", spec: "শিশুরোগ বিশেষজ্ঞ", fee1: 500, fee2: 300, schedules: [{day: "মঙ্গলবার", time: "4:00 PM - 8:00 PM", room: "158"}, {day: "শুক্রবার", time: "10:00 AM - 2:00 PM", room: "158"}] },
-
-        // অর্থোপেডিক বিভাগ
-        { name: "ডা. মোঃ শরিফুল ইসলাম রুদ্র", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "অর্থোপেডিক ও ট্রমা বিশেষজ্ঞ", fee1:500, fee2: 0, schedules: [{day: "শনিবার", time: "10:00 AM - 8:00 PM", room: "147"}, {day: "বুধবার", time: "10:00 AM - 8:00 PM", room: "147"}] },
-        { name: "ডা. মাহমুদুর রহমান", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "অর্থোপেডিক বিশেষজ্ঞ ও সার্জন", fee1:600, fee2: 0, schedules: [{day: "শনিবার", time: "4:00 PM - 8:00 PM", room: "148"}, {day: "মঙ্গলবার", time: "4:00 PM - 8:00 PM", room: "148"}, {day: "বৃহস্পতিবার", time: "4:00 PM - 8:00 PM", room: "148"}] },
-        { name: "ডা. মোঃ জাহাঙ্গীর আলম", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "অর্থোপেডিক্স, স্পাইন এন্ড ট্রমা বিশেষজ্ঞ সার্জন", fee1:600, fee2: 0, schedules: [{day: "শনিবার", time: "3:00 PM - 8:00 PM", room: "118"}, {day: "শুক্রবার", time: "10:00 AM - 7:00 PM", room: "118"}] },
-        { name: "ডা. মোফাজ্জলুল হক", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "অর্থোপেডিক ও ট্রমা সার্জন", fee1:500, fee2: 0, schedules: [{day: "রবিবার", time: "10:00 AM - 1:00 PM", room: "118"}] },
-        { name: "অধ্যাপক ডা. শাহ্ মোঃ ফয়সাল", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "অর্থোপেডিক বিশেষজ্ঞ ও সার্জন", fee1:700, fee2: 0, schedules: [{day: "রবিবার", time: "5:00 PM - 9:00 PM", room: "157"}, {day: "সোমবার", time: "5:00 PM - 9:00 PM", room: "157"}, {day: "বুধবার", time: "5:00 PM - 9:00 PM", room: "157"}] },
-        { name: "ডা. আশিক আহমেদ", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "অর্থোপেডিক, ট্রমা, স্পাইন এন্ড স্পোর্টস ইঞ্জুরি বিশেষজ্ঞ ও সার্জন", fee1:600, fee2: 0, schedules: [{day: "রবিবার", time: "3:00 PM - 8:00 PM", room: "146"}] },
-        { name: "সহকারী অধ্যাপক ডা. এম.এম. আব্দুল্লাহ আল মামুন", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "অর্থোপেডিক সার্জারী বিশেষজ্ঞ ও ট্রমা সার্জন", fee1:600, fee2: 0, schedules: [{day: "রবিবার", time: "4:00 PM - 8:00 PM", room: "118"}] },
-        { name: "ডা. সুরজিৎ সাহা", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "হাড় জোড়া, হাড় ভাঙ্গা, বাত ব্যথা রোগ বিশেষজ্ঞ ও সার্জন", fee1:500, fee2: 0, schedules: [{day: "সোমবার", time: "10:00 AM - 2:00 PM", room: "118"}, {day: "বুধবার", time: "10:00 AM - 2:00 PM", room: "118"}, {day: "বৃহস্পতিবার", time: "10:00 AM - 2:00 PM", room: "118"}] },
-        { name: "ডা. মোঃ নাজমুল হাসান", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "অর্থোপেডিক ও ট্রমা বিশেষজ্ঞ", fee1:500, fee2: 0, schedules: [{day: "সোমবার", time: "4:00 PM - 9:00 PM", room: "114"}, {day: "শুক্রবার", time: "10:00 AM - 8:00 PM", room: "114"}] },
-        { name: "ডা. মোঃ আমান উল্লাহ কবির (মিলটন)", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "হাড় জোড়া, বাত ব্যথা, মেরুদন্ড ও আঘাত জনিত রোগ বিশেষজ্ঞ ও সার্জন", fee1:600, fee2: 0, schedules: [{day: "সোমবার", time: "4:00 PM - 8:00 PM", room: "145"}, {day: "বৃহস্পতিবার", time: "4:00 PM - 8:00 PM", room: "145"}, {day: "শুক্রবার", time: "2:00 PM - 8:00 PM", room: "145"}] },
-        { name: "ডা. মো. জাহিদ হাসান সিদ্দিক", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "অর্থোপেডিক ও ট্রমা সার্জন", fee1:600, fee2: 0, schedules: [{day: "সোমবার", time: "4:00 PM - 8:00 PM", room: "118"}] },
-        { name: "ডা. এস.এম. মশিউর রহমান", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "বাত ব্যথা, হাড় ভাঙ্গা, জয়েন্ট রিপলেসমেন্ট বিশেষজ্ঞ ও সার্জন", fee1:600, fee2: 0, schedules: [{day: "মঙ্গলবার", time: "4:00 PM - 8:00 PM", room: "118"}, {day: "বুধবার", time: "4:00 PM - 8:00 PM", room: "118"}] },
-        { name: "সহযোগী অধ্যাপক ডা. মোঃ মাসুদ রানা", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "অর্থোপেডিক্স ও ট্রমা সার্জন", fee1:700, fee2: 0, schedules: [{day: "মঙ্গলবার", time: "3:00 PM - 7:00 PM", room: "157"}] },
-        { name: "অধ্যাপক ডা. সৈয়দ সহিদুল ইসলাম", dept: "অর্থোপেডিক (হাড়-জোড়া ও ট্রমা)", spec: "অর্থোপেডিক্স, ট্রমা ও স্পাইন সার্জারি", fee1:1000, fee2: 0, schedules: [{day: "বুধবার", time: "4:00 PM - 8:00 PM", room: "148"}] },
-
-        // চর্ম ও যৌন রোগ
-        { name: "ডা. মো: মোস্তাফিজুর রহমান", dept: "চর্ম ও যৌন রোগ", spec: "কনসালটেন্ট ডার্মাটোলজিস্ট", fee1: 500, fee2: 300, schedules: [{day: "শনিবার", time: "10:00 AM - 2:00 PM", room: "116"}, {day: "মঙ্গলবার", time: "10:00 AM - 2:00 PM", room: "116"}] },
-        { name: "ডা. অর্পন কুমার বসাক", dept: "চর্ম ও যৌন রোগ", spec: "চর্ম, যৌন ও এলার্জি রোগ বিশেষজ্ঞ", fee1: 700, fee2: 500, schedules: [{day: "শনিবার", time: "4:00 PM - 7:00 PM", room: "121"}] },
-        { name: "সহযোগী অধ্যাপক ডা. তানিয়া হক", dept: "চর্ম ও যৌন রোগ", spec: "চর্ম, যৌন ও এলার্জী রোগ বিশেষজ্ঞ", fee1: 700, fee2: 500, schedules: [{day: "শনিবার", time: "3:00 PM - 6:00 PM", room: "160"}, {day: "সোমবার", time: "4:00 PM - 7:00 PM", room: "160"}, {day: "বুধবার", time: "4:00 PM - 7:00 PM", room: "160"}] },
-        { name: "অধ্যাপক ডা. মোঃ আরিফ চৌধুরী", dept: "চর্ম ও যৌন রোগ", spec: "চর্ম, যৌন, সেক্স ও এলার্জি রোগ বিশেষজ্ঞ ও কসমেটিক্স সার্জন", fee1: 1000, fee2: 700, schedules: [{day: "রবিবার", time: "4:00 PM - 7:00 PM", room: "160"}, {day: "মঙ্গলবার", time: "4:00 PM - 7:00 PM", room: "160"}, {day: "শুক্রবার", time: "10:00 AM - 7:00 PM", room: "160"}] },
-        { name: "ডা. তাহমিদা সারমিন", dept: "চর্ম ও যৌন রোগ", spec: "চর্ম, যৌন, এলার্জি, শিশুচর্ম ও কুষ্ঠরোগ বিশেষজ্ঞ", fee1: 700, fee2: 500, schedules: [{day: "রবিবার", time: "4:00 PM - 8:00 PM", room: "147"}, {day: "মঙ্গলবার", time: "4:00 PM - 8:00 PM", room: "147"}] },
-        { name: "ডা. মোঃ রাকিবুল হাসান", dept: "চর্ম ও যৌন রোগ", spec: "চর্ম, যৌন ও এলার্জি রোগ বিশেষজ্ঞ", fee1: 500, fee2: 300, schedules: [{day: "সোমবার", time: "4:00 PM - 7:00 PM", room: "121"}, {day: "বৃহস্পতিবার", time: "4:30 PM - 7:00 PM", room: "121"}] },
-        { name: "ডা. কাজী ইমরান হাসান", dept: "চর্ম ও যৌন রোগ", spec: "চর্ম, যৌন, টাক ও এলার্জি রোগ বিশেষজ্ঞ এবং ডার্মাটোসার্জন", fee1: 700, fee2: 500, schedules: [{day: "বুধবার", time: "5:00 PM - 7:00 PM", room: "160"}] },
-        { name: "ডা. ফাতিমা ওয়াহিদা", dept: "চর্ম ও যৌন রোগ", spec: "চর্ম, যৌন ও এলার্জি বিশেষজ্ঞ", fee1: 700, fee2: 500, schedules: [{day: "শুক্রবার", time: "10:00 AM - 5:00 PM", room: "155"}] },
-        { name: "সহকারী অধ্যাপক ডা. সোহেল মীর্জা", dept: "চর্ম ও যৌন রোগ", spec: "চর্ম, এলার্জি, সেক্স ও যৌন রোগে বিশেষজ্ঞ", fee1: 800, fee2: 500, schedules: [{day: "শুক্রবার", time: "4:00 PM - 8:00 PM", room: "156"}] },
-
-        // সার্জারি, ইউরোলজি ও কিডনি
-        { name: "ডা. হুমায়ূন কবির কল্লোল", dept: "সার্জারি, ইউরোলজি ও কিডনি", spec: "জেনারেল, ল্যাপারোস্কপিক সার্জন ও ইউরোলজিস্ট", fee1:800, fee2: 0, schedules: [{day: "শনিবার", time: "6:00 PM - 9:00 PM", room: "144"}, {day: "মঙ্গলবার", time: "6:00 PM - 9:00 PM", room: "144"}, {day: "বৃহস্পতিবার", time: "6:00 PM - 9:00 PM", room: "144"}] },
-        { name: "ডা. আহমেদ কবির চৌধুরী", dept: "সার্জারি, ইউরোলজি ও কিডনি", spec: "জেনারেল, ল্যাপারোস্কপি, কোলোরেক্টাল এন্ড ব্রেস্ট সার্জন", fee1:600, fee2: 400, schedules: [{day: "রবিবার", time: "4:00 PM - 8:00 PM", room: "121"}] },
-        { name: "ডা. জুলকার নঈমূল ইসলাম (সোহেল)", dept: "সার্জারি, ইউরোলজি ও কিডনি", spec: "কিডনী, মূত্রনালী, প্রোষ্টেট রোগ বিশেষজ্ঞ ও সার্জন", fee1:700, fee2: 500, schedules: [{day: "রবিবার", time: "4:00 PM - 8:00 PM", room: "144"}] },
-        { name: "সহযোগী অধ্যাপক ডা. মোঃ সুমন রহমান", dept: "সার্জারি, ইউরোলজি ও কিডনি", spec: "জেনারেল ও ল্যাপারোস্কপিক সার্জন", fee1:800, fee2: 500, schedules: [{day: "সোমবার", time: "4:00 PM - 8:00 PM", room: "144"}, {day: "শুক্রবার", time: "10:00 AM - 4:00 PM", room: "144"}] },
-        { name: "ডা. আহসানুল কবির শিপলু", dept: "সার্জারি, ইউরোলজি ও কিডনি", spec: "কিডনি মূত্রথলি ও ল্যাপাস্কোপিক সার্জন", fee1:600, fee2: 400, schedules: [{day: "সোমবার", time: "4:00 PM - 8:00 PM", room: "149"}] },
-        { name: "ডা. কল্লোল দে", dept: "সার্জারি, ইউরোলজি ও কিডনি", spec: "জেনারেল, ল্যাপারোস্কোপিক সার্জন ও সার্জিক্যাল অনকোলজিস্ট", fee1:800, fee2: 500, schedules: [{day: "বুধবার", time: "4:00 PM - 8:00 PM", room: "144"}, {day: "শুক্রবার", time: "4:00 PM - 8:00 PM", room: "144"}] },
-        { name: "অধ্যাপক ডা. মৃন্ময় বিশ্বাস", dept: "সার্জারি, ইউরোলজি ও কিডনি", spec: "কিডনী, ইউরোলজী ও সার্জারী বিশেষজ্ঞ", fee1:1000, fee2: 700, schedules: [{day: "শুক্রবার", time: "3:00 PM - 8:00 PM", room: "157"}] },
-
-        // নাক, কান ও গলা
-        { name: "ডা. ফয়সাল বিন মহসিন", dept: "নাক, কান ও গলা (ENT)", spec: "নাক, কান, গলা রোগ বিশেষজ্ঞ ও সার্জন", fee1: 700, fee2: 500, schedules: [{day: "শনিবার", time: "5:00 PM - 8:00 PM", room: "149"}] },
-        { name: "ডাঃ মোঃ রিপন মিয়া", dept: "নাক, কান ও গলা (ENT)", spec: "নাক কাল গলা রোগ বিশেষজ্ঞ ও হেড-নেক সার্জন", fee1: 600, fee2: 400, schedules: [{day: "শনিবার", time: "4:00 PM - 8:00 PM", room: "120"}, {day: "রবিবার", time: "4:00 PM - 7:00 PM", room: "120"}, {day: "বুধবার", time: "4:00 PM - 7:00 PM", room: "120"}] },
-        { name: "সহযোগী অধ্যাপক ডা. মুনতাসির মাহবুব", dept: "নাক, কান ও গলা (ENT)", spec: "নাক, কান, গলা, ঘাড়, মাথা ব্যথা বিশেষজ্ঞ ও সার্জন", fee1: 600, fee2: 400, schedules: [{day: "রবিবার", time: "5:00 PM - 8:00 PM", room: "158"}] },
-        { name: "ডা. সাইফুল ইসলাম", dept: "নাক, কান ও গলা (ENT)", spec: "নাক, কান, গলা রোগ বিশেষজ্ঞ এবং হেড নেক সার্জন", fee1: 600, fee2: 400, schedules: [{day: "সোমবার", time: "5:00 PM - 9:00 PM", room: "145"}, {day: "শুক্রবার", time: "10:00 AM - 9:00 PM", room: "145"}] },
-        { name: "অধ্যাপক ডা. দেলোয়ার হোসেন", dept: "নাক, কান ও গলা (ENT)", spec: "নাক, কান, গলা রোগ বিশেষজ্ঞ ও হেড নেক সার্জন", fee1: 1000, fee2:700, schedules: [{day: "মঙ্গলবার", time: "4:00 PM - 6:00 PM", room: "149"}, {day: "শুক্রবার", time: "5:00 PM - 6:00 PM", room: "149"}] },
-        { name: "সহকারী অধ্যাপক ডাঃ মোঃ হাসানুল হক (নিপুন)", dept: "নাক, কান ও গলা (ENT)", spec: "নাক, কান, গলা রোগ বিশেষজ্ঞ ও হেড-নেক সার্জন", fee1: 700, fee2: 500, schedules: [{day: "মঙ্গলবার", time: "4:00 PM - 8:00 PM", room: "145"}] },
-        { name: "সহকারী অধ্যাপক ডা. সজল রায়", dept: "নাক, কান ও গলা (ENT)", spec: "নাক, কান, গলা রোগ বিশেষজ্ঞ ও হেড নেক সার্জন", fee1: 600, fee2: 400, schedules: [{day: "বৃহস্পতিবার", time: "5:00 PM - 8:00 PM", room: "147"}] },
-        { name: "ডা. মোঃ হাসনাত আনোয়ার", dept: "নাক, কান ও গলা (ENT)", spec: "নাক, কান ও গলা রোগ বিশেষজ্ঞ ও সার্জন", fee1: 500, fee2: 300, schedules: [{day: "বৃহস্পতিবার", time: "4:00 PM - 8:00 PM", room: "120"}] },
-
-        // চক্ষু রোগ
-        { name: "ডাঃ মোঃ সুজন মাহমুদ", dept: "চক্ষু রোগ", spec: "চক্ষু ও মাথা ব্যথা রোগে অভিজ্ঞ", fee1: 200, fee2: 0, schedules: [{day: "শনিবার", time: "9:00 AM - 9:00 PM", room: "N/A"}, {day: "রবিবার", time: "9:00 AM - 9:00 PM", room: "N/A"}, {day: "সোমবার", time: "9:00 AM - 9:00 PM", room: "N/A"}, {day: "বুধবার", time: "9:00 AM - 9:00 PM", room: "N/A"}, {day: "বৃহস্পতিবার", time: "9:00 AM - 9:00 PM", room: "N/A"}] },
-        { name: "সহকারী অধ্যাপক ডা. মোঃ মাহফুজ উল্লাহ", dept: "চক্ষু রোগ", spec: "চক্ষু বিশেষজ্ঞ ও সার্জন", fee1: 700, fee2: 0, schedules: [{day: "শনিবার", time: "5:00 PM - 6:00 PM", room: "N/A"}, {day: "রবিবার", time: "5:00 PM - 6:00 PM", room: "N/A"}, {day: "বুধবার", time: "5:00 PM - 6:00 PM", room: "N/A"}] },
-        { name: "ডা: এস এম নাজমুল হাসান", dept: "চক্ষু রোগ", spec: "চক্ষু ও মাথা ব্যাথা রোগে অভিজ্ঞ", fee1: 200, fee2: 0, schedules: [{day: "রবিবার", time: "9:00 AM - 2:00 PM", room: "N/A"}, {day: "মঙ্গলবার", time: "9:00 AM - 2:00 PM", room: "N/A"}, {day: "বুধবার", time: "9:00 AM - 2:00 PM", room: "N/A"}] },
-        { name: "সহকারী অধ্যাপক ডাঃ হোসনেয়ারা খাতুন", dept: "চক্ষু রোগ", spec: "চক্ষু বিশেষজ্ঞ ও সার্জন", fee1: 700, fee2: 500, schedules: [{day: "মঙ্গলবার", time: "4:00 PM - 8:00 PM", room: "N/A"}] },
-        { name: "সহযোগী অধ্যাপক ডাঃ মোঃ মহর আলী", dept: "চক্ষু রোগ", spec: "চক্ষু বিশেষজ্ঞ ও সার্জন", fee1: 700, fee2: 500, schedules: [{day: "শুক্রবার", time: "10:00 AM - 3:00 PM", room: "N/A"}] },
-        { name: "ডা. ফরিদ উদ্দীন আহমাদ", dept: "চক্ষু রোগ", spec: "জেনারেল চক্ষু চিকিৎসক", fee1: 600, fee2: 4000, schedules: [{day: "শুক্রবার", time: "4:00 PM - 8:00 PM", room: "N/A"}] },
-
-        // দন্ত রোগ
-        { name: "ডা. এম. আরফান মাহমুদ", dept: "দন্ত রোগ", spec: "মুখ ও দন্ত রোগ বিশেষজ্ঞ ও সার্জন", fee1: 0, fee2: 0, schedules: [{day: "শনিবার", time: "10:00 AM - 2:00 PM", room: "N/A"}, {day: "রবিবার", time: "1:00 PM - 4:00 PM", room: "N/A"}, {day: "সোমবার", time: "10:00 AM - 2:00 PM", room: "N/A"}, {day: "মঙ্গলবার", time: "1:00 PM - 4:00 PM", room: "N/A"}, {day: "বুধবার", time: "10:00 AM - 2:00 PM", room: "N/A"}, {day: "বৃহস্পতিবার", time: "1:00 PM - 4:00 PM", room: "N/A"}, {day: "শুক্রবার", time: "10:00 AM - 2:00 PM", room: "N/A"}] },
-        { name: "ডা. রিজিয়া পারভীন শিখা", dept: "দন্ত রোগ", spec: "ওরাল এন্ড ডেন্টাল সার্জন", fee1: 0, fee2: 0, schedules: [{day: "শনিবার", time: "11:00 AM - 1:00 PM", room: "N/A"}, {day: "সোমবার", time: "11:00 AM - 1:00 PM", room: "N/A"}, {day: "বুধবার", time: "11:00 AM - 1:00 PM", room: "N/A"}, {day: "শুক্রবার", time: "11:00 AM - 1:00 PM", room: "N/A"}] },
-        { name: "ডা. মোঃ রেজাউল হক (রেজা)", dept: "দন্ত রোগ", spec: "ডেন্টাল ও ম্যাক্সলোফেসিয়াল বিশেষজ্ঞ ও সার্জন", fee1: 0, fee2: 0, schedules: [{day: "শনিবার", time: "4:00 PM - 9:00 PM", room: "N/A"}, {day: "মঙ্গলবার", time: "5:00 PM - 9:00 PM", room: "N/A"}] },
-        { name: "ডা. অনন্যা বিশ্বাস", dept: "দন্ত রোগ", spec: "ওরাল এন্ড ডেন্টাল সার্জন", fee1: 0, fee2: 0, schedules: [{day: "সোমবার", time: "3:00 PM - 7:00 PM", room: "N/A"}, {day: "বুধবার", time: "3:00 PM - 7:00 PM", room: "N/A"}] },
-
-        // ফিজিওথেরাপি ও অন্যান্য
-        { name: "ডা. মুহাম্মদ হাসিফ", dept: "ফিজিওথেরাপি ও অন্যান্য", spec: "ফিজিওথেরাপি বিশেষজ্ঞ", fee1: 0, fee2: 0, schedules: [{day: "শনিবার", time: "9:00 AM - 9:00 PM", room: "N/A"}, {day: "রবিবার", time: "9:00 AM - 9:00 PM", room: "N/A"}, {day: "সোমবার", time: "9:00 AM - 9:00 PM", room: "N/A"}, {day: "মঙ্গলবার", time: "9:00 AM - 9:00 PM", room: "N/A"}, {day: "বুধবার", time: "9:00 AM - 9:00 PM", room: "N/A"}, {day: "শুক্রবার", time: "9:00 AM - 9:00 PM", room: "N/A"}] },
-        { name: "পুষ্টিবিদ সায়মা আক্তার লিজা", dept: "ফিজিওথেরাপি ও অন্যান্য", spec: "নিউট্রিশন ও ডায়েট কনসালটেন্ট", fee1: 500, fee2: 0, schedules: [{day: "শনিবার", time: "10:00 AM - 8:00 PM", room: "116"}, {day: "রবিবার", time: "10:00 AM - 8:00 PM", room: "-1"}, {day: "সোমবার", time: "10:00 AM - 8:00 PM", room: "116"}, {day: "মঙ্গলবার", time: "10:00 AM - 8:00 PM", room: "116"}, {day: "বুধবার", time: "10:00 AM - 8:00 PM", room: "116"}, {day: "বৃহস্পতিবার", time: "10:00 AM - 8:00 PM", room: "116"}] },
-        { name: "অধ্যাপক ডা. এম. এস জহিরুল হক চৌধুরী", dept: "ফিজিওথেরাপি ও অন্যান্য", spec: "নিউরোমেডিসিন বিশেষজ্ঞ", fee1: 1000, fee2: 0, schedules: [{day: "শুক্রবার", time: "11:00 AM - 7:00 PM", room: "147"}] }
-    ];
-
-    const depts = [...new Set(doctors.map(d => d.dept))];
-
-    window.onload = () => {
-        const selectors = ['deptSelectDay', 'deptSelectFee', 'deptSelectFull'];
-        selectors.forEach(sId => {
-            const el = document.getElementById(sId);
-            depts.forEach(d => el.innerHTML += `<option value="${d}">${d}</option>`);
-        });
-    };
-
-    function showSection(id, btn) {
-        document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
-        document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-link'));
-        btn.classList.add('active-link');
-    }
-
-    // ডাক্তার কার্ড আইটেম জেনারেটর (ভিজিট ফি সহ)
-    function createDocListItem(doc, schedule) {
-        return `
-            <div class="doctor-card">
-                <div class="doc-name">${doc.name}</div>
-                <div class="doc-spec">${doc.spec}</div>
-                <div class="card-meta">
-                    <span class="badge"><i class="fa-solid fa-stethoscope"></i> ${doc.dept}</span>
-                    <span class="badge badge-fee"><i class="fa-solid fa-wallet"></i> ফি: ${doc.fee1}/-</span>
-                    <span class="badge badge-time"><i class="fa-solid fa-clock"></i> ${schedule.time}</span>
-                    <span class="badge badge-room"><i class="fa-solid fa-door-open"></i> রুম: ${schedule.room}</span>
-                </div>
-            </div>`;
-    }
-
-    // দিন অনুযায়ী ফিল্টার (সকাল/বিকাল এবং ফি সহ)
-    function filterDay() {
-        const day = document.getElementById('daySelect').value;
-        const dept = document.getElementById('deptSelectDay').value;
-        const res = document.getElementById('dayResults');
-        if(!day) return;
-
-        const filtered = doctors.filter(d => (!dept || d.dept === dept) && d.schedules.some(s => s.day === day));
-        
-        let morningHtml = "";
-        let afternoonHtml = "";
-
-        filtered.forEach(d => {
-            const s = d.schedules.find(sc => sc.day === day);
-            if(s.time.includes("AM") && !s.time.startsWith("12")) {
-                morningHtml += createDocListItem(d, s);
-            } else {
-                afternoonHtml += createDocListItem(d, s);
-            }
-        });
-
-        res.innerHTML = `
-            <div class="shift-title shift-morning"><i class="fa-solid fa-sun"></i> সকালের তালিকা</div>
-            ${morningHtml || '<div class="no-data" style="padding:10px;">সকালে কোনো ডাক্তার নেই।</div>'}
-            <div class="shift-title shift-afternoon"><i class="fa-solid fa-moon"></i> বিকাল ও সন্ধ্যার তালিকা</div>
-            ${afternoonHtml || '<div class="no-data" style="padding:10px;">বিকালে কোনো ডাক্তার নেই।</div>'}
-        `;
-    }
-
-    // সার্চ ফাংশন (ফি সহ)
-    function searchDoctors() {
-        const query = document.getElementById('mainSearch').value.toLowerCase();
-        const results = document.getElementById('searchResults');
-        if(query.length < 2) { results.innerHTML = ''; return; }
-
-        const filtered = doctors.filter(d => 
-            d.name.toLowerCase().includes(query) || 
-            d.spec.toLowerCase().includes(query) ||
-            d.dept.toLowerCase().includes(query)
-        );
-
-        results.innerHTML = filtered.length ? filtered.map(d => `
-            <div class="doctor-card">
-                <div class="doc-name">${d.name}</div>
-                <div class="doc-spec">${d.spec}</div>
-                <div class="card-meta">
-                    <span class="badge"><i class="fa-solid fa-stethoscope"></i> ${d.dept}</span>
-                    <span class="badge badge-fee"><i class="fa-solid fa-wallet"></i> ফি: ${d.fee1}/-</span>
-                </div>
-                <div style="font-size:13px; color:#475569; margin-top:5px;">
-                    ${d.schedules.map(s => `<b>${s.day}:</b> ${s.time} (রুম: ${s.room})`).join('<br>')}
-                </div>
-            </div>
-        `).join('') : '<div class="no-data">তথ্য পাওয়া যায়নি।</div>';
-    }
-
-    // ফি টেবিল
-    function filterFees() {
-        const dept = document.getElementById('deptSelectFee').value;
-        const res = document.getElementById('feeResults');
-        if(!dept) return;
-
-        let html = `<table><thead><tr><th>ডাক্তারের নাম</th><th>১ম ফি</th><th>২য় ফি</th></tr></thead><tbody>`;
-        doctors.filter(d => d.dept === dept).forEach(d => {
-            html += `<tr><td><strong>${d.name}</strong><br><small>${d.spec}</small></td><td>${d.fee1}/-</td><td>${d.fee2 ? d.fee2+'/-' : 'N/A'}</td></tr>`;
-        });
-        res.innerHTML = html + `</tbody></table>`;
-    }
-
-    // ফুল শিডিউল আপডেট
-    function updateDocList() {
-        const dept = document.getElementById('deptSelectFull').value;
-        const docSelect = document.getElementById('doctorSelect');
-        docSelect.innerHTML = '<option value="">ডাক্তার সিলেক্ট করুন</option>';
-        doctors.filter(d => d.dept === dept).forEach(d => {
-            docSelect.innerHTML += `<option value="${d.name}">${d.name}</option>`;
-        });
-    }
-
-    function showFullSchedule() {
-        const name = document.getElementById('doctorSelect').value;
-        const res = document.getElementById('fullResults');
-        if(!name) return;
-        const d = doctors.find(doc => doc.name === name);
-        res.innerHTML = `
-            <div class="doctor-card">
-                <div class="doc-name">${d.name}</div>
-                <div class="doc-spec">${d.spec}</div>
-                <div class="card-meta" style="margin-bottom:15px;">
-                    <span class="badge badge-fee" style="font-size:16px; padding:5px 15px;"><i class="fa-solid fa-wallet"></i> ভিজিট ফি: ${d.fee1}/-</span>
-                </div>
-                <div style="background:#f8fafc; padding:10px; border-radius:8px;">
-                    ${d.schedules.map(s => `<div style="padding:5px 0; border-bottom:1px solid #e2e8f0;"><b>${s.day}:</b> ${s.time} (রুম: ${s.room})</div>`).join('')}
-                </div>
-            </div>`;
-    }
-</script>
+<!-- JavaScript Links (Data must be first) -->
+<script src="data.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
