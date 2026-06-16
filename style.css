@@ -34,7 +34,7 @@ section.active { display: block; }
 .search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
 
 .services-scroll { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 15px; scrollbar-width: none; }
-.service-box { min-width: 185px; background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: var(--shadow); border: 1px solid #e2e8f0; }
+.service-box { min-width: 185px; background: white; padding: 15px; border-radius: 12px; text-align: center; box-shadow: var(--shadow); border: 1px solid #e2e8f0; }
 .service-box i { font-size: 20px; color: var(--accent); margin-bottom: 6px; }
 .service-box p { font-size: 10px; font-weight: 700; margin: 0; line-height: 1.2; }
 
