@@ -3,53 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>খাজা বদরুদদোজা মডার্ন হাসপাতাল - ডিজিটাল শিডিউল</title>
-    
-    <!-- ফন্ট এবং আইকন -->
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>KBMH - ডিজিটাল পোর্টাল</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <h1><i class="fa-solid fa-hospital-user"></i> খাজা বদরুদদোজা মডার্ন হাসপাতাল</h1>
-    <p>সফিপুর, কালিয়াকৈর, গাজীপুর</p>
+    <p>আজিজ ম্যানশন, সফিপুর, কালিয়াকৈর, গাজীপুর</p>
     <div class="contact-info">
+        <a href="tel:10668" class="hotline-top"><i class="fa-solid fa-phone-volume"></i> ১০৬৬৮</a>
         <a href="tel:01776606262"><i class="fa-solid fa-phone"></i> ০১৭৭৬-৬০৬২৬২</a>
-        <a href="tel:01687625565"><i class="fa-solid fa-phone"></i> ০১৬৮৭৬২৫৫৬৫</a>
     </div>
 </header>
 
 <nav id="navbar">
-    <a onclick="showSection('home', this)" class="active-link"><i class="fa-solid fa-magnifying-glass"></i> খুঁজুন</a>
-    <a onclick="showSection('day-view', this)"><i class="fa-solid fa-calendar-day"></i> আজকের শিডিউল</a>
-    <a onclick="showSection('fee-view', this)"><i class="fa-solid fa-tags"></i> ভিজিট ফি</a>
-    <a onclick="showSection('full-view', this)"><i class="fa-solid fa-clipboard-list"></i> পূর্ণাঙ্গ রুটিন</a>
+    <a onclick="showSection('home', this)" class="active-link"><i class="fa-solid fa-house"></i> হোম</a>
+    <a onclick="showSection('day-view', this)"><i class="fa-solid fa-calendar-day"></i> আজকের ডাক্তার</a>
+    <a onclick="showSection('fee-view', this)"><i class="fa-solid fa-tags"></i> ফি তালিকা</a>
+    <a onclick="showSection('full-view', this)"><i class="fa-solid fa-clipboard-list"></i> রুটিন</a>
+    <a onclick="showSection('settings-view', this)"><i class="fa-solid fa-gears"></i> সেটিংস</a>
 </nav>
 
 <div class="container">
-    <!-- সার্চ সেকশন -->
+    
+    <!-- ১. হোম পেজ সেকশন -->
     <section id="home" class="active">
+        <div class="hotline-card">
+            <div class="hotline-text">
+                <span>২৪ ঘণ্টা জরুরি সেবা</span>
+                <h3>হটলাইন: ১০৬৬৮</h3>
+            </div>
+            <a href="tel:10668" class="call-btn">কল দিন</a>
+        </div>
+
+        <div class="hospital-info-grid">
+            <div class="info-item"><i class="fa-solid fa-bed-pulse"></i><span>৫০ শয্যাবিশিষ্ট</span></div>
+            <div class="info-item"><i class="fa-solid fa-user-doctor"></i><span>শতাধিক বিশেষজ্ঞ</span></div>
+            <div class="info-item"><i class="fa-solid fa-snowflake"></i><span>শীাতাতপ নিয়ন্ত্রিত</span></div>
+        </div>
+
         <div class="search-container">
-            <input type="text" id="mainSearch" class="search-box" placeholder="ডাক্তারের নাম বা বিভাগ লিখে সার্চ করুন..." onkeyup="searchDoctors()">
+            <input type="text" id="mainSearch" class="search-box" placeholder="ডাক্তার বা বিভাগ খুঁজুন..." onkeyup="searchDoctors()">
             <i class="fa-solid fa-search search-icon"></i>
         </div>
+
         <div id="searchResults"></div>
+
+        <div class="service-heading">আমাদের বিশেষ সেবাসমূহ</div>
+        <div class="services-scroll">
+            <div class="service-box"><i class="fa-solid fa-microscope"></i><p>Toshiba CT Scan</p></div>
+            <div class="service-box"><i class="fa-solid fa-scissors"></i><p>ল্যাপারোস্কোপিক সার্জারি</p></div>
+            <div class="service-box"><i class="fa-solid fa-baby"></i><p>উন্নত NICU</p></div>
+            <div class="service-box"><i class="fa-solid fa-eye"></i><p>ফ্যাকো সার্জারি</p></div>
+        </div>
+
+        <!-- লিফলেট থেকে নেওয়া সেবা সমূহ -->
+        <div class="detailed-services">
+            <h4 class="service-title-small"><i class="fa-solid fa-hand-holding-medical"></i> হসপিটালের সুযোগ-সুবিধাসমূহ:</h4>
+            <ul class="hospital-services">
+                <li><i class="fa-solid fa-circle-check"></i> জাপানি Toshiba CT Scan সিটি স্ক্যান মেশিন</li>
+                <li><i class="fa-solid fa-circle-check"></i> সর্বাধুনিক ৫০০ এম এ জাপানি DR এক্স-রে</li>
+                <li><i class="fa-solid fa-circle-check"></i> আধুনিক যন্ত্রপাতি সমৃদ্ধ প্যাথলজি ল্যাব</li>
+                <li><i class="fa-solid fa-circle-check"></i> ভলুসন ই-৮ আল্ট্রাসনোগ্রাম (২ডি, ৪ডি, টিভিএস)</li>
+                <li><i class="fa-solid fa-circle-check"></i> জাপানি সি-আর্মের মাধ্যমে জটিল অর্থোপেডিক্স অপারেশন</li>
+                <li><i class="fa-solid fa-circle-check"></i> মহিলা ডাক্তার দ্বারা আল্ট্রাসনোগ্রাম সুবিধা</li>
+                <li><i class="fa-solid fa-circle-check"></i> অত্যাধুনিক এপোক্সি কোটেড ৪টি অপারেশন থিয়েটার</li>
+                <li><i class="fa-solid fa-circle-check"></i> ইকোকার্ডিওগ্রাম, ইটিটি ও বিশেষজ্ঞ কার্ডিওলজিস্ট</li>
+                <li><i class="fa-solid fa-circle-check"></i> জার্মান স্টর্জ মেশিনে ল্যাপারোস্কোপিক অপারেশন</li>
+            </ul>
+        </div>
     </section>
 
-    <!-- আজকের শিডিউল -->
+    <!-- ২. আজকের শিডিউল -->
     <section id="day-view">
         <div class="filter-grid">
             <select id="daySelect" onchange="filterDay()">
                 <option value="">দিন সিলেক্ট করুন</option>
-                <option value="শনিবার">শনিবার</option>
-                <option value="রবিবার">রবিবার</option>
-                <option value="সোমবার">সোমবার</option>
-                <option value="মঙ্গলবার">মঙ্গলবার</option>
-                <option value="বুধবার">বুধবার</option>
-                <option value="বৃহস্পতিবার">বৃহস্পতিবার</option>
+                <option value="শনিবার">শনিবার</option><option value="রবিবার">রবিবার</option>
+                <option value="সোমবার">সোমবার</option><option value="মঙ্গলবার">মঙ্গলবার</option>
+                <option value="বুধবার">বুধবার</option><option value="বৃহস্পতিবার">বৃহস্পতিবার</option>
                 <option value="শুক্রবার">শুক্রবার</option>
             </select>
             <select id="deptSelectDay" onchange="filterDay()"><option value="">সকল বিভাগ</option></select>
@@ -57,13 +92,13 @@
         <div id="dayResults"></div>
     </section>
 
-    <!-- ভিজিট ফি -->
+    <!-- ৩. ফি তালিকা -->
     <section id="fee-view">
-        <select id="deptSelectFee" onchange="filterFees()"><option value="">বিভাগ সিলেক্ট করুন</option></select>
+        <select id="deptSelectFee" onchange="filterFees()" style="margin-bottom:15px;"><option value="">বিভাগ সিলেক্ট করুন</option></select>
         <div class="table-responsive" id="feeResults"></div>
     </section>
 
-    <!-- পূর্ণাঙ্গ রুটিন -->
+    <!-- ৪. পূর্ণাঙ্গ রুটিন -->
     <section id="full-view">
         <div class="filter-grid">
             <select id="deptSelectFull" onchange="updateDocList()"><option value="">বিভাগ সিলেক্ট করুন</option></select>
@@ -71,13 +106,20 @@
         </div>
         <div id="fullResults"></div>
     </section>
+
+    <!-- ৫. এডমিন সেটিংস -->
+    <section id="settings-view">
+        <div class="admin-filter-container">
+            <label style="font-size:13px; font-weight:bold; color:var(--text-muted); display:block; margin-bottom:5px;">এডমিন প্যানেল: ডাক্তার অন/অফ করুন</label>
+            <select id="deptSelectSettings" onchange="renderSettingsList()"><option value="">বিভাগ সিলেক্ট করুন</option></select>
+        </div>
+        <div id="settingsList"></div>
+    </section>
+
 </div>
 
-<div class="footer">
-    <p>&copy; ২০২৪ খাজা বদরুদদোজা মডার্ন হাসপাতাল। সফিপুর, কালিয়াকৈর, গাজীপুর।</p>
-</div>
+<div class="footer"><p>&copy; ২০২৬ খাজা বদরুদদোজা মডার্ন হাসপাতাল। সফিপুর, গাজীপুর।</p></div>
 
-<!-- জাভাস্ক্রিপ্ট ফাইল কানেকশন -->
 <script src="data.js"></script>
 <script src="script.js"></script>
 
