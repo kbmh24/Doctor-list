@@ -1,135 +1,68 @@
-/* --- Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
-
-:root {
-    --primary: #0d9488;    /* মেডিকেল গ্রিন */
-    --secondary: #0f766e;
-    --accent: #2563eb;     /* ব্লু */
-    --danger: #e11d48;
-    --bg: #f1f5f9;
-    --text-main: #1e293b;
-    --text-muted: #64748b;
-    --white: #ffffff;
-    --shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* --- Global Reset --- */
+:root { --primary: #0d9488; --secondary: #0f766e; --accent: #2563eb; --hotline: #be123c; --bg: #f1f5f9; --text-main: #1e293b; --text-muted: #64748b; --white: #ffffff; --shadow: 0 2px 5px rgba(0,0,0,0.08); }
 * { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Hind Siliguri', sans-serif; background-color: var(--bg); color: var(--text-main); line-height: 1.5; padding-top: 165px; padding-bottom: 70px; }
 
-body {
-    font-family: 'Hind Siliguri', sans-serif;
-    background-color: var(--bg);
-    color: var(--text-main);
-    line-height: 1.5;
-    padding-top: 165px; /* হেডার ও নেভিগেশনের জন্য জায়গা */
-    padding-bottom: 60px;
-}
-
-/* --- Compact Header (ফিক্সড) --- */
-header {
-    position: fixed; top: 0; left: 0; width: 100%;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: var(--white); padding: 10px; text-align: center;
-    box-shadow: var(--shadow); z-index: 1200;
-}
-
+header { position: fixed; top: 0; left: 0; width: 100%; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 10px; text-align: center; z-index: 1200; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
 header h1 { font-size: 18px; font-weight: 700; }
-header p { font-size: 12px; opacity: 0.9; margin-top: 2px; }
+header p { font-size: 11px; opacity: 0.9; margin: 2px 0 5px 0; }
+.contact-info { display: flex; justify-content: center; gap: 8px; }
+.contact-info a { color: white; text-decoration: none; background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 50px; font-size: 11px; font-weight: 700; border: 1px solid rgba(255,255,255,0.3); }
+.hotline-top { background: var(--hotline) !important; }
 
-.contact-info { margin-top: 6px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
-.contact-info a { 
-    color: var(--white); text-decoration: none; background: rgba(255,255,255,0.2); 
-    padding: 2px 10px; border-radius: 50px; font-size: 11px; font-weight: 600;
-    border: 1px solid rgba(255,255,255,0.3);
-}
-
-/* --- Compact Navigation (ফিক্সড) --- */
-nav {
-    background: var(--white); display: flex; justify-content: center;
-    position: fixed; top: 102px; left: 0; width: 100%;
-    z-index: 1100; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    overflow-x: auto; scrollbar-width: none;
-}
-nav::-webkit-scrollbar { display: none; }
-
-nav a {
-    color: var(--text-muted); padding: 10px 15px; text-decoration: none;
-    font-weight: 600; font-size: 13px; transition: 0.3s;
-    border-bottom: 3px solid transparent; white-space: nowrap;
-    display: flex; flex-direction: column; align-items: center; gap: 2px;
-}
+nav { background: var(--white); display: flex; justify-content: center; position: fixed; top: 102px; left: 0; width: 100%; z-index: 1100; box-shadow: 0 2px 5px rgba(0,0,0,0.05); overflow-x: auto; scrollbar-width: none; }
+nav a { color: var(--text-muted); padding: 10px 15px; text-decoration: none; font-weight: 600; font-size: 13px; transition: 0.3s; border-bottom: 3px solid transparent; white-space: nowrap; display: flex; flex-direction: column; align-items: center; gap: 2px; }
 nav a i { font-size: 16px; }
 nav a.active-link { color: var(--primary); border-bottom-color: var(--primary); background: #f0fdfa; }
 
-/* --- Main Container --- */
 .container { max-width: 800px; margin: 0 auto; padding: 10px 15px; }
-
-section { display: none; animation: fadeIn 0.3s ease-out; }
+section { display: none; animation: fadeIn 0.4s ease; }
 section.active { display: block; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* --- Compact Filters & Search --- */
-.search-container { position: relative; margin-bottom: 10px; }
-.search-box { 
-    width: 100%; padding: 10px 15px 10px 40px; border-radius: 10px;
-    border: 1px solid #cbd5e1; font-size: 14px; outline: none; transition: 0.3s;
-}
-.search-box:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1); }
+.hotline-card { background: linear-gradient(90deg, var(--hotline), #e11d48); color: white; padding: 15px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(190, 18, 60, 0.2); }
+.hotline-text h3 { margin: 0; font-size: 20px; }
+.call-btn { background: white; color: var(--hotline); padding: 6px 15px; border-radius: 8px; font-weight: 800; font-size: 13px; text-decoration: none; animation: pulse 2s infinite; }
+
+.hospital-info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 15px; }
+.info-item { background: white; border: 1px solid #e2e8f0; padding: 10px 5px; border-radius: 12px; text-align: center; }
+.info-item i { font-size: 18px; color: var(--primary); display: block; margin-bottom: 4px; }
+.info-item span { font-size: 10px; font-weight: 700; }
+
+.search-container { position: relative; margin-bottom: 15px; }
+.search-box { width: 100%; padding: 12px 15px 12px 45px; border-radius: 12px; border: 1px solid #cbd5e1; font-size: 15px; outline: none; }
 .search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
 
-.filter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
-select { 
-    width: 100%; padding: 8px; border-radius: 8px; border: 1px solid #cbd5e1;
-    font-size: 13px; background: var(--white); cursor: pointer; outline: none;
-}
+.services-scroll { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 15px; scrollbar-width: none; }
+.service-box { min-width: 185px; background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: var(--shadow); border: 1px solid #e2e8f0; }
+.service-box i { font-size: 20px; color: var(--accent); margin-bottom: 6px; }
+.service-box p { font-size: 10px; font-weight: 700; margin: 0; line-height: 1.2; }
 
-/* --- Doctor Card (Compact) --- */
-.doctor-card {
-    background: var(--white); border-radius: 12px; padding: 15px;
-    margin-bottom: 10px; border-left: 5px solid var(--primary);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: 0.2s;
-}
-.doctor-card:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.detailed-services { background: white; padding: 15px; border-radius: 12px; border: 1px solid #e2e8f0; margin-top: 10px; }
+.service-title-small { font-size: 14px; color: var(--primary); margin-bottom: 10px; border-bottom: 2px solid #f0fdfa; padding-bottom: 5px; }
+.hospital-services { list-style: none; padding: 0; }
+.hospital-services li { font-size: 12px; padding: 6px 0; border-bottom: 1px solid #f8fafc; display: flex; align-items: center; gap: 8px; }
+.hospital-services li i { color: var(--primary); font-size: 13px; }
 
-.doc-name { font-size: 17px; color: var(--primary); font-weight: 700; margin-bottom: 2px; }
-.doc-spec { color: var(--text-muted); font-size: 13px; margin-bottom: 10px; line-height: 1.4; }
-
-/* --- Badges --- */
+.doctor-card { background: white; border-radius: 12px; padding: 15px; margin-bottom: 12px; border-left: 5px solid var(--primary); box-shadow: var(--shadow); }
+.doc-name { font-size: 17px; color: var(--primary); font-weight: 700; }
+.doc-spec { font-size: 13px; color: var(--text-muted); margin-bottom: 10px; }
 .card-meta { display: flex; gap: 6px; flex-wrap: wrap; }
-.badge { 
-    background: #f1f5f9; padding: 3px 8px; border-radius: 6px; 
-    font-size: 11px; font-weight: 600; display: flex; align-items: center; gap: 4px;
-}
+.badge { background: #f1f5f9; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; display: flex; align-items: center; gap: 4px; }
 .badge-time { background: #eff6ff; color: #1d4ed8; }
 .badge-room { background: #fffbeb; color: #b45309; }
 .badge-fee { background: #fff1f2; color: #be123c; }
 
-/* --- Shift Titles --- */
-.shift-title {
-    padding: 6px 12px; border-radius: 8px; margin: 15px 0 8px 0;
-    font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 8px;
-}
-.shift-morning { background: #fff7ed; color: #9a3412; border-left: 4px solid #f97316; }
-.shift-afternoon { background: #f0f9ff; color: #0369a1; border-left: 4px solid #0ea5e9; }
+.settings-card { background: white; border-radius: 12px; padding: 12px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #eee; }
+.toggle-btn { border: none; padding: 6px 15px; border-radius: 20px; font-size: 11px; font-weight: 700; cursor: pointer; min-width: 85px; }
+.btn-on { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+.btn-off { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
 
-/* --- Table (Compact) --- */
-.table-responsive { overflow-x: auto; background: var(--white); border-radius: 10px; box-shadow: var(--shadow); }
+.filter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 15px; }
+select { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 14px; background: white; }
+.table-responsive { overflow-x: auto; background: white; border-radius: 10px; box-shadow: var(--shadow); }
 table { width: 100%; border-collapse: collapse; min-width: 400px; }
-th { background: #f8fafc; color: var(--text-muted); padding: 10px; text-align: left; font-size: 12px; text-transform: uppercase; border-bottom: 2px solid #e2e8f0; }
-td { padding: 10px; border-bottom: 1px solid #f1f5f9; font-size: 13px; }
-tr:last-child td { border-bottom: none; }
-
-/* --- Footer --- */
-.footer { position: fixed; bottom: 0; left: 0; width: 100%; background: #1e293b; color: var(--white); text-align: center; padding: 10px; font-size: 11px; z-index: 1200; }
-
-/* --- No Data State --- */
-.no-data { text-align: center; padding: 30px; color: var(--text-muted); border: 1px dashed #cbd5e1; border-radius: 12px; margin-top: 10px; font-size: 14px; }
-
-/* --- Mobile Adjustments --- */
-@media (max-width: 600px) {
-    body { padding-top: 165px; }
-    nav { top: 102px; height: 55px; }
-    nav a { padding: 8px 12px; font-size: 11px; }
-    .filter-grid { grid-template-columns: 1fr 1fr; } /* মোবাইলেও ২ কলাম */
-    header h1 { font-size: 16px; }
-}
+th, td { padding: 12px; border-bottom: 1px solid #f1f5f9; font-size: 14px; text-align: left; }
+.footer { position: fixed; bottom: 0; left: 0; width: 100%; background: #1e293b; color: white; text-align: center; padding: 12px; font-size: 11px; z-index: 1200; }
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.8; } 100% { opacity: 1; } }
+@media (max-width: 600px) { body { padding-top: 165px; } nav a { padding: 10px 12px; font-size: 11px; } }
