@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>খাজা বদরুদদোজা মডার্ন হাসপাতাল - ডিজিটাল শিডিউল</title>
     
-    <!-- Google Fonts & FontAwesome -->
+    <!-- ফন্ট এবং আইকন -->
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -30,13 +30,16 @@
 </nav>
 
 <div class="container">
-    <!-- Search Section -->
+    <!-- সার্চ সেকশন -->
     <section id="home" class="active">
-        <input type="text" id="mainSearch" class="search-box" placeholder="ডাক্তারের নাম বা বিভাগ লিখে সার্চ করুন..." onkeyup="searchDoctors()">
+        <div class="search-container">
+            <input type="text" id="mainSearch" class="search-box" placeholder="ডাক্তারের নাম বা বিভাগ লিখে সার্চ করুন..." onkeyup="searchDoctors()">
+            <i class="fa-solid fa-search search-icon"></i>
+        </div>
         <div id="searchResults"></div>
     </section>
 
-    <!-- Day View Section -->
+    <!-- আজকের শিডিউল -->
     <section id="day-view">
         <div class="filter-grid">
             <select id="daySelect" onchange="filterDay()">
@@ -54,13 +57,13 @@
         <div id="dayResults"></div>
     </section>
 
-    <!-- Fee View -->
+    <!-- ভিজিট ফি -->
     <section id="fee-view">
-        <select id="deptSelectFee" onchange="filterFees()" style="margin-bottom:20px;"><option value="">বিভাগ সিলেক্ট করুন</option></select>
+        <select id="deptSelectFee" onchange="filterFees()"><option value="">বিভাগ সিলেক্ট করুন</option></select>
         <div class="table-responsive" id="feeResults"></div>
     </section>
 
-    <!-- Full Schedule -->
+    <!-- পূর্ণাঙ্গ রুটিন -->
     <section id="full-view">
         <div class="filter-grid">
             <select id="deptSelectFull" onchange="updateDocList()"><option value="">বিভাগ সিলেক্ট করুন</option></select>
@@ -71,10 +74,10 @@
 </div>
 
 <div class="footer">
-    <p>&copy; ২০২৪ খাজা বদরুদদোজা মডার্ন হাসপাতাল। সফিপুর, গাজীপুর।</p>
+    <p>&copy; ২০২৪ খাজা বদরুদদোজা মডার্ন হাসপাতাল। সফিপুর, কালিয়াকৈর, গাজীপুর।</p>
 </div>
 
-<!-- JavaScript Links -->
+<!-- জাভাস্ক্রিপ্ট ফাইল কানেকশন -->
 <script src="data.js"></script>
 <script src="script.js"></script>
 
