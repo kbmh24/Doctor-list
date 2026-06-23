@@ -596,7 +596,7 @@ const doctors = [
         fee1: 500, fee2: 0, 
         schedules: [
             {day: "সোমবার", time: "10:00 AM - 2:00 PM", room: "118"},
-            {day: "বুধবার", time: "10:00 AM - 2:00 PM", room: "118"},
+            {day: "মঙ্গলবার", time: "10:00 AM - 2:00 PM", room: "118"},
             {day: "বৃহস্পতিবার", time: "10:00 AM - 2:00 PM", room: "118"}
         ] 
     },
